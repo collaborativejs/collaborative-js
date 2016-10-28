@@ -1,0 +1,27 @@
+{
+  "name": "collaborativejs",
+  "description": "Collaborative software for any project",
+  "main": "dist/collaborative.min.js",
+  "authors": [
+    "Roman Lubushkin <roman.lubushkin@collaborativejs.org>",
+    "Anton Saukh <anton.saukh@collaborativejs.org>"
+  ],
+  "license": "SEE LICENSE IN <http://collaborativejs.org/buy>",
+  "keywords": [
+    "Collaborative",
+    "Collaborative",
+    "Software",
+    "JavaScript",
+    "NodeJS",
+    "Live",
+    "Editing"
+  ],
+  "homepage": "http://collaborativejs.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

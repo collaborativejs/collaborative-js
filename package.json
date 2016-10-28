@@ -1,0 +1,30 @@
+{
+  "name": "collaborativejs",
+  "version": "0.0.1",
+  "description": "Collaborative software for any project",
+  "main": "dist/collaborative.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/collaborativejs/collaborativejs"
+  },
+  "bugs": {
+    "url": "https://github.com/collaborativejs/collaborativejs/issues"
+  },
+  "keywords": [
+    "Collaborative",
+    "Collaborative Software",
+    "JavaScript",
+    "NodeJS",
+    "Live Editing"
+  ],
+  "author": "CollaborativeJS <contact@collaborativejs.org> (http://collaborativejs.org)",
+  "license": "SEE LICENSE IN <http://collaborativejs.org/buy>",
+  "homepage": "https://collaborativejs.org",
+  "contributors": [
+    "Roman Lubushkin <roman.lubushkin@collaborativejs.org>",
+    "Anton Saukh <anton.saukh@collaborativejs.org>"
+  ]
+}
