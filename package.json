@@ -1,6 +1,6 @@
 {
   "name": "collaborativejs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Collaborative software for any project",
   "main": "dist/collaborative.min.js",
   "scripts": {
