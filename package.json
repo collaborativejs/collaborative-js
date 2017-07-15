@@ -1,6 +1,6 @@
 {
   "name": "collaborative",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Collaborative software for any project",
   "scripts": {
     "test": "mocha --reporter spec --recursive tests/automatic 2>&1 | tee out/tests_report.txt"
@@ -21,7 +21,7 @@
   ],
   "author": "CollaborativeJS <contact@collaborativejs.org> (http://collaborativejs.org)",
   "license": "SEE LICENSE IN <http://collaborativejs.org/buy>",
-  "homepage": "https://collaborativejs.org",
+  "homepage": "http://collaborativejs.org",
   "contributors": [
     "Roman Lubushkin <roman.lubushkin@collaborativejs.org>",
     "Anton Saukh <anton.saukh@collaborativejs.org>"
