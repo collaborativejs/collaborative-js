@@ -1,1 +1,1 @@
-module.exports = require("./dist/collaborative.min.js").cot;
+module.exports = require("./dist/collaborative.min.js").clv;

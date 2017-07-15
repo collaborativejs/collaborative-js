@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "google/protobuf/any.proto";
+package clv;
+
+message Operation {
+  string site_id = 1;
+  int32 seq_id = 2;
+  int32 inv_count = 3;
+  map<string, clv.ContextEntry> context = 4;
+  google.protobuf.Any load = 5;
+}
+
+message ContextEntry {
+    int32 seq_id = 1;
+    map<int32, int32> inv_cluster = 2;
+}

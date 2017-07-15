@@ -1,16 +1,16 @@
 {
   "name": "collaborative",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Collaborative software for any project",
   "scripts": {
     "test": "mocha --reporter spec --recursive tests/automatic 2>&1 | tee out/tests_report.txt"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/collaborativejs/collaborativejs"
+    "url": "https://github.com/collaborativejs/collaborative-js"
   },
   "bugs": {
-    "url": "https://github.com/collaborativejs/collaborativejs/issues"
+    "url": "https://github.com/collaborativejs/collaborativej-s/issues"
   },
   "keywords": [
     "Collaborative Documents",
