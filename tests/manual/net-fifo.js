@@ -1,6 +1,6 @@
 var request = require('request');
 var uuid = require('uuid');
-var cljs = require('collaborativejs');
+var clv = require('collaborativejs');
 
 // region ---- start server
 console.log('Waiting for the server to startup');
@@ -53,9 +53,9 @@ var serverKeysStored = NaN;
 var serverUpdatesSent = NaN;
 var serverexecOrder = NaN;
 
-// cljs vars
+// clv vars
 var timerObj = {setTimeout: setTimeout, clearTimeout: clearTimeout};
-var net = new cljs.net.Http(timerObj);
+var net = new clv.net.Http(timerObj);
 net.setSendingFn(sendingFunction);
 
 

@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var uuid = require('uuid');
-var cljs = require('collaborativejs');
+var clv = require('collaborativejs');
 
 // create in-memory storage
 var storage = {};
@@ -82,19 +82,19 @@ app.post('/document/:id/update', function(req, res) {
 
 
 function applyUpdates(documentData, updates) {
-  var document = new cljs.StringDocument(null, documentData.execOrder, documentData.context);
+  var document = new clv.string.Document(null, documentData.execOrder, documentData.context);
   document.update(documentData.ops);
 
   for (var i = 0, count = updates.length; i < count; i++) {
     var op = updates[i];
     // check whenever op is valid op and it will not not corrupt document
     // console.log('check', JSON.stringify(op), JSON.stringify(documentData.context))
-    if (cljs.ops.canApply(op, documentData.context)) {
+    if (clv.ops.canApply(op, documentData.context)) {
       // check whenever op is have been already applied
-      if (!cljs.ops.seen(op, documentData.context)) {
+      if (!clv.ops.seen(op, documentData.context)) {
         op.execOrder = documentData.ops.length + 1;
         var tuple = document.update(op);
-        documentData.data = cljs.ops.string.exec(documentData.data, tuple.toExec);
+        documentData.data = clv.ops.string.exec(documentData.data, tuple.toExec);
         documentData.context = document.getContext();
         documentData.ops.push(op);
         documentData.execOrder = document.getExecOrder();
