@@ -1,5 +1,5 @@
 {
-  "name": "collaborativejs",
+  "name": "collaborative",
   "description": "Collaborative software for any project",
   "main": "dist/collaborative.min.js",
   "authors": [
@@ -7,6 +7,7 @@
     "Anton Saukh <anton.saukh@collaborativejs.org>"
   ],
   "license": "SEE LICENSE IN <http://collaborativejs.org/buy>",
+  "homepage": "http://collaborativejs.org",
   "keywords": [
     "Collaborative",
     "Collaborative",
@@ -16,12 +17,14 @@
     "Live",
     "Editing"
   ],
-  "homepage": "http://collaborativejs.org",
   "ignore": [
-    "**/.*",
+    ".idea",
+    ".DS_Store",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "npm-debug.log",
+    "/tests",
+    "*.pyc",
+    "*.swo",
+    "*.swp"
   ]
 }
