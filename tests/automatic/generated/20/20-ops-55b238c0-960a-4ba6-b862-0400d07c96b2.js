@@ -17,418 +17,418 @@ describe("Generated test - rm/undo/redo/undo/rm/ins/ins/undo/rm/ins/ins/undo/red
   it("Site a45a9000-537f-11e7-be63-5f8bb1381151 operations should be executed without errors", function() {
     var update1 = [{"siteId":"a45deb60-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":1,"value":"t"},"execOrder":1}];
     var updateTuple1 = doc1.update(update1);
-    data1 = clv.ops.string.exec(data1, updateTuple1.toExec);
+    data1 = clv.string.exec(data1, updateTuple1.toExec);
 
     var update2 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":2,"value":"tyr"},"execOrder":2}];
     var updateTuple2 = doc1.update(update2);
-    data1 = clv.ops.string.exec(data1, updateTuple2.toExec);
+    data1 = clv.string.exec(data1, updateTuple2.toExec);
 
     var commit1 = [{"type":1,"at":5,"value":"rl"}];
     var commitTuple1 = doc1.commit(commit1);
-    data1 = clv.ops.string.exec(data1, commitTuple1.toExec);
+    data1 = clv.string.exec(data1, commitTuple1.toExec);
 
     var update3 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"qw"},"execOrder":3},{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"rl"},"execOrder":4}];
     var updateTuple3 = doc1.update(update3);
-    data1 = clv.ops.string.exec(data1, updateTuple3.toExec);
+    data1 = clv.string.exec(data1, updateTuple3.toExec);
 
     var commitTuple2 = doc1.undo();
-    data1 = clv.ops.string.exec(data1, commitTuple2.toExec);
+    data1 = clv.string.exec(data1, commitTuple2.toExec);
 
     var update4 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":0,"at":5,"value":"rl"},"execOrder":5}];
     var updateTuple4 = doc1.update(update4);
-    data1 = clv.ops.string.exec(data1, updateTuple4.toExec);
+    data1 = clv.string.exec(data1, updateTuple4.toExec);
 
     var update5 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":1,"at":4,"value":"qw"},"execOrder":6},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":2,"value":"tyr"},"execOrder":7}];
     var updateTuple5 = doc1.update(update5);
-    data1 = clv.ops.string.exec(data1, updateTuple5.toExec);
+    data1 = clv.string.exec(data1, updateTuple5.toExec);
 
     var commitTuple3 = doc1.redo();
-    data1 = clv.ops.string.exec(data1, commitTuple3.toExec);
+    data1 = clv.string.exec(data1, commitTuple3.toExec);
 
     var update6 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":4,"value":"lo "},"execOrder":8},{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":3},"invCount":2,"load":{"type":1,"at":5,"value":"rl"},"execOrder":9}];
     var updateTuple6 = doc1.update(update6);
-    data1 = clv.ops.string.exec(data1, updateTuple6.toExec);
+    data1 = clv.string.exec(data1, updateTuple6.toExec);
 
     var commitTuple4 = doc1.undo();
-    data1 = clv.ops.string.exec(data1, commitTuple4.toExec);
+    data1 = clv.string.exec(data1, commitTuple4.toExec);
 
     var update7 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":3},"invCount":3,"load":{"type":0,"at":5,"value":"rl"},"execOrder":10}];
     var updateTuple7 = doc1.update(update7);
-    data1 = clv.ops.string.exec(data1, updateTuple7.toExec);
+    data1 = clv.string.exec(data1, updateTuple7.toExec);
 
     var commit5 = [{"type":1,"at":3,"value":"l"}];
     var commitTuple5 = doc1.commit(commit5);
-    data1 = clv.ops.string.exec(data1, commitTuple5.toExec);
+    data1 = clv.string.exec(data1, commitTuple5.toExec);
 
     var update8 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":8,"value":"yeq"},"execOrder":11}];
     var updateTuple8 = doc1.update(update8);
-    data1 = clv.ops.string.exec(data1, updateTuple8.toExec);
+    data1 = clv.string.exec(data1, updateTuple8.toExec);
 
     var update9 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":3,"value":"l"},"execOrder":12}];
     var updateTuple9 = doc1.update(update9);
-    data1 = clv.ops.string.exec(data1, updateTuple9.toExec);
+    data1 = clv.string.exec(data1, updateTuple9.toExec);
 
     var update10 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":13},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":14}];
     var updateTuple10 = doc1.update(update10);
-    data1 = clv.ops.string.exec(data1, updateTuple10.toExec);
+    data1 = clv.string.exec(data1, updateTuple10.toExec);
 
     var commit6 = [{"type":0,"at":6,"value":"tq"}];
     var commitTuple6 = doc1.commit(commit6);
-    data1 = clv.ops.string.exec(data1, commitTuple6.toExec);
+    data1 = clv.string.exec(data1, commitTuple6.toExec);
 
     var update11 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":2,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":15}];
     var updateTuple11 = doc1.update(update11);
-    data1 = clv.ops.string.exec(data1, updateTuple11.toExec);
+    data1 = clv.string.exec(data1, updateTuple11.toExec);
 
     var update12 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":6,"value":"tq"},"execOrder":16}];
     var updateTuple12 = doc1.update(update12);
-    data1 = clv.ops.string.exec(data1, updateTuple12.toExec);
+    data1 = clv.string.exec(data1, updateTuple12.toExec);
 
     var update13 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":3,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":17}];
     var updateTuple13 = doc1.update(update13);
-    data1 = clv.ops.string.exec(data1, updateTuple13.toExec);
+    data1 = clv.string.exec(data1, updateTuple13.toExec);
 
     var update14 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":7,"value":"wtt"},"execOrder":18}];
     var updateTuple14 = doc1.update(update14);
-    data1 = clv.ops.string.exec(data1, updateTuple14.toExec);
+    data1 = clv.string.exec(data1, updateTuple14.toExec);
 
     var update15 = [{"siteId":"a4608370-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":3},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"e"},"execOrder":19},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":8,"value":"yeq"},"execOrder":20}];
     var updateTuple15 = doc1.update(update15);
-    data1 = clv.ops.string.exec(data1, updateTuple15.toExec);
+    data1 = clv.string.exec(data1, updateTuple15.toExec);
 
   });
 
   it("Site a45cb2e0-537f-11e7-be63-5f8bb1381151 operations should be executed without errors", function() {
     var commit1 = [{"type":0,"at":2,"value":"tyr"}];
     var commitTuple1 = doc2.commit(commit1);
-    data2 = clv.ops.string.exec(data2, commitTuple1.toExec);
+    data2 = clv.string.exec(data2, commitTuple1.toExec);
 
     var update1 = [{"siteId":"a45deb60-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":1,"value":"t"},"execOrder":1},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":2,"value":"tyr"},"execOrder":2}];
     var updateTuple1 = doc2.update(update1);
-    data2 = clv.ops.string.exec(data2, updateTuple1.toExec);
+    data2 = clv.string.exec(data2, updateTuple1.toExec);
 
     var update2 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"qw"},"execOrder":3},{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"rl"},"execOrder":4}];
     var updateTuple2 = doc2.update(update2);
-    data2 = clv.ops.string.exec(data2, updateTuple2.toExec);
+    data2 = clv.string.exec(data2, updateTuple2.toExec);
 
     var update3 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":0,"at":5,"value":"rl"},"execOrder":5}];
     var updateTuple3 = doc2.update(update3);
-    data2 = clv.ops.string.exec(data2, updateTuple3.toExec);
+    data2 = clv.string.exec(data2, updateTuple3.toExec);
 
     var commitTuple2 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple2.toExec);
+    data2 = clv.string.exec(data2, commitTuple2.toExec);
 
     var update4 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":1,"at":4,"value":"qw"},"execOrder":6},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":2,"value":"tyr"},"execOrder":7}];
     var updateTuple4 = doc2.update(update4);
-    data2 = clv.ops.string.exec(data2, updateTuple4.toExec);
+    data2 = clv.string.exec(data2, updateTuple4.toExec);
 
     var commit3 = [{"type":1,"at":4,"value":"lo "}];
     var commitTuple3 = doc2.commit(commit3);
-    data2 = clv.ops.string.exec(data2, commitTuple3.toExec);
+    data2 = clv.string.exec(data2, commitTuple3.toExec);
 
     var update5 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":4,"value":"lo "},"execOrder":8}];
     var updateTuple5 = doc2.update(update5);
-    data2 = clv.ops.string.exec(data2, updateTuple5.toExec);
+    data2 = clv.string.exec(data2, updateTuple5.toExec);
 
     var update6 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":3},"invCount":2,"load":{"type":1,"at":5,"value":"rl"},"execOrder":9}];
     var updateTuple6 = doc2.update(update6);
-    data2 = clv.ops.string.exec(data2, updateTuple6.toExec);
+    data2 = clv.string.exec(data2, updateTuple6.toExec);
 
     var commit4 = [{"type":0,"at":8,"value":"yeq"}];
     var commitTuple4 = doc2.commit(commit4);
-    data2 = clv.ops.string.exec(data2, commitTuple4.toExec);
+    data2 = clv.string.exec(data2, commitTuple4.toExec);
 
     var update7 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":3},"invCount":3,"load":{"type":0,"at":5,"value":"rl"},"execOrder":10}];
     var updateTuple7 = doc2.update(update7);
-    data2 = clv.ops.string.exec(data2, updateTuple7.toExec);
+    data2 = clv.string.exec(data2, updateTuple7.toExec);
 
     var update8 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":8,"value":"yeq"},"execOrder":11}];
     var updateTuple8 = doc2.update(update8);
-    data2 = clv.ops.string.exec(data2, updateTuple8.toExec);
+    data2 = clv.string.exec(data2, updateTuple8.toExec);
 
     var commit5 = [{"type":0,"at":12,"value":"rtq"}];
     var commitTuple5 = doc2.commit(commit5);
-    data2 = clv.ops.string.exec(data2, commitTuple5.toExec);
+    data2 = clv.string.exec(data2, commitTuple5.toExec);
 
     var commitTuple6 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple6.toExec);
+    data2 = clv.string.exec(data2, commitTuple6.toExec);
 
     var update9 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":3,"value":"l"},"execOrder":12},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":13}];
     var updateTuple9 = doc2.update(update9);
-    data2 = clv.ops.string.exec(data2, updateTuple9.toExec);
+    data2 = clv.string.exec(data2, updateTuple9.toExec);
 
     var commitTuple7 = doc2.redo();
-    data2 = clv.ops.string.exec(data2, commitTuple7.toExec);
+    data2 = clv.string.exec(data2, commitTuple7.toExec);
 
     var update10 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":14}];
     var updateTuple10 = doc2.update(update10);
-    data2 = clv.ops.string.exec(data2, updateTuple10.toExec);
+    data2 = clv.string.exec(data2, updateTuple10.toExec);
 
     var update11 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":2,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":15}];
     var updateTuple11 = doc2.update(update11);
-    data2 = clv.ops.string.exec(data2, updateTuple11.toExec);
+    data2 = clv.string.exec(data2, updateTuple11.toExec);
 
     var commitTuple8 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple8.toExec);
+    data2 = clv.string.exec(data2, commitTuple8.toExec);
 
     var update12 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":6,"value":"tq"},"execOrder":16},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":3,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":17}];
     var updateTuple12 = doc2.update(update12);
-    data2 = clv.ops.string.exec(data2, updateTuple12.toExec);
+    data2 = clv.string.exec(data2, updateTuple12.toExec);
 
     var commitTuple9 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple9.toExec);
+    data2 = clv.string.exec(data2, commitTuple9.toExec);
 
     var update13 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":7,"value":"wtt"},"execOrder":18}];
     var updateTuple13 = doc2.update(update13);
-    data2 = clv.ops.string.exec(data2, updateTuple13.toExec);
+    data2 = clv.string.exec(data2, updateTuple13.toExec);
 
     var update14 = [{"siteId":"a4608370-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":3},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"e"},"execOrder":19},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":8,"value":"yeq"},"execOrder":20}];
     var updateTuple14 = doc2.update(update14);
-    data2 = clv.ops.string.exec(data2, updateTuple14.toExec);
+    data2 = clv.string.exec(data2, updateTuple14.toExec);
 
   });
 
   it("Site a45deb60-537f-11e7-be63-5f8bb1381151 operations should be executed without errors", function() {
     var commit1 = [{"type":0,"at":1,"value":"t"}];
     var commitTuple1 = doc3.commit(commit1);
-    data3 = clv.ops.string.exec(data3, commitTuple1.toExec);
+    data3 = clv.string.exec(data3, commitTuple1.toExec);
 
     var update1 = [{"siteId":"a45deb60-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":1,"value":"t"},"execOrder":1}];
     var updateTuple1 = doc3.update(update1);
-    data3 = clv.ops.string.exec(data3, updateTuple1.toExec);
+    data3 = clv.string.exec(data3, updateTuple1.toExec);
 
     var update2 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":2,"value":"tyr"},"execOrder":2}];
     var updateTuple2 = doc3.update(update2);
-    data3 = clv.ops.string.exec(data3, updateTuple2.toExec);
+    data3 = clv.string.exec(data3, updateTuple2.toExec);
 
     var update3 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"qw"},"execOrder":3},{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"rl"},"execOrder":4}];
     var updateTuple3 = doc3.update(update3);
-    data3 = clv.ops.string.exec(data3, updateTuple3.toExec);
+    data3 = clv.string.exec(data3, updateTuple3.toExec);
 
     var update4 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":0,"at":5,"value":"rl"},"execOrder":5}];
     var updateTuple4 = doc3.update(update4);
-    data3 = clv.ops.string.exec(data3, updateTuple4.toExec);
+    data3 = clv.string.exec(data3, updateTuple4.toExec);
 
     var update5 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":1,"at":4,"value":"qw"},"execOrder":6}];
     var updateTuple5 = doc3.update(update5);
-    data3 = clv.ops.string.exec(data3, updateTuple5.toExec);
+    data3 = clv.string.exec(data3, updateTuple5.toExec);
 
     var update6 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":2,"value":"tyr"},"execOrder":7}];
     var updateTuple6 = doc3.update(update6);
-    data3 = clv.ops.string.exec(data3, updateTuple6.toExec);
+    data3 = clv.string.exec(data3, updateTuple6.toExec);
 
     var update7 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":4,"value":"lo "},"execOrder":8}];
     var updateTuple7 = doc3.update(update7);
-    data3 = clv.ops.string.exec(data3, updateTuple7.toExec);
+    data3 = clv.string.exec(data3, updateTuple7.toExec);
 
     var update8 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":3},"invCount":2,"load":{"type":1,"at":5,"value":"rl"},"execOrder":9}];
     var updateTuple8 = doc3.update(update8);
-    data3 = clv.ops.string.exec(data3, updateTuple8.toExec);
+    data3 = clv.string.exec(data3, updateTuple8.toExec);
 
     var update9 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":3},"invCount":3,"load":{"type":0,"at":5,"value":"rl"},"execOrder":10}];
     var updateTuple9 = doc3.update(update9);
-    data3 = clv.ops.string.exec(data3, updateTuple9.toExec);
+    data3 = clv.string.exec(data3, updateTuple9.toExec);
 
     var update10 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":8,"value":"yeq"},"execOrder":11}];
     var updateTuple10 = doc3.update(update10);
-    data3 = clv.ops.string.exec(data3, updateTuple10.toExec);
+    data3 = clv.string.exec(data3, updateTuple10.toExec);
 
     var update11 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":3,"value":"l"},"execOrder":12}];
     var updateTuple11 = doc3.update(update11);
-    data3 = clv.ops.string.exec(data3, updateTuple11.toExec);
+    data3 = clv.string.exec(data3, updateTuple11.toExec);
 
     var update12 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":13}];
     var updateTuple12 = doc3.update(update12);
-    data3 = clv.ops.string.exec(data3, updateTuple12.toExec);
+    data3 = clv.string.exec(data3, updateTuple12.toExec);
 
     var update13 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":14}];
     var updateTuple13 = doc3.update(update13);
-    data3 = clv.ops.string.exec(data3, updateTuple13.toExec);
+    data3 = clv.string.exec(data3, updateTuple13.toExec);
 
     var update14 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":2,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":15}];
     var updateTuple14 = doc3.update(update14);
-    data3 = clv.ops.string.exec(data3, updateTuple14.toExec);
+    data3 = clv.string.exec(data3, updateTuple14.toExec);
 
     var update15 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":6,"value":"tq"},"execOrder":16},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":3,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":17}];
     var updateTuple15 = doc3.update(update15);
-    data3 = clv.ops.string.exec(data3, updateTuple15.toExec);
+    data3 = clv.string.exec(data3, updateTuple15.toExec);
 
     var update16 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":7,"value":"wtt"},"execOrder":18}];
     var updateTuple16 = doc3.update(update16);
-    data3 = clv.ops.string.exec(data3, updateTuple16.toExec);
+    data3 = clv.string.exec(data3, updateTuple16.toExec);
 
     var update17 = [{"siteId":"a4608370-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":3},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"e"},"execOrder":19}];
     var updateTuple17 = doc3.update(update17);
-    data3 = clv.ops.string.exec(data3, updateTuple17.toExec);
+    data3 = clv.string.exec(data3, updateTuple17.toExec);
 
     var update18 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":8,"value":"yeq"},"execOrder":20}];
     var updateTuple18 = doc3.update(update18);
-    data3 = clv.ops.string.exec(data3, updateTuple18.toExec);
+    data3 = clv.string.exec(data3, updateTuple18.toExec);
 
   });
 
   it("Site a45f4af0-537f-11e7-be63-5f8bb1381151 operations should be executed without errors", function() {
     var update1 = [{"siteId":"a45deb60-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":1,"value":"t"},"execOrder":1}];
     var updateTuple1 = doc4.update(update1);
-    data4 = clv.ops.string.exec(data4, updateTuple1.toExec);
+    data4 = clv.string.exec(data4, updateTuple1.toExec);
 
     var update2 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":2,"value":"tyr"},"execOrder":2}];
     var updateTuple2 = doc4.update(update2);
-    data4 = clv.ops.string.exec(data4, updateTuple2.toExec);
+    data4 = clv.string.exec(data4, updateTuple2.toExec);
 
     var commit1 = [{"type":0,"at":4,"value":"qw"}];
     var commitTuple1 = doc4.commit(commit1);
-    data4 = clv.ops.string.exec(data4, commitTuple1.toExec);
+    data4 = clv.string.exec(data4, commitTuple1.toExec);
 
     var update3 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"qw"},"execOrder":3}];
     var updateTuple3 = doc4.update(update3);
-    data4 = clv.ops.string.exec(data4, updateTuple3.toExec);
+    data4 = clv.string.exec(data4, updateTuple3.toExec);
 
     var update4 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"rl"},"execOrder":4}];
     var updateTuple4 = doc4.update(update4);
-    data4 = clv.ops.string.exec(data4, updateTuple4.toExec);
+    data4 = clv.string.exec(data4, updateTuple4.toExec);
 
     var commitTuple2 = doc4.undo();
-    data4 = clv.ops.string.exec(data4, commitTuple2.toExec);
+    data4 = clv.string.exec(data4, commitTuple2.toExec);
 
     var update5 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":0,"at":5,"value":"rl"},"execOrder":5}];
     var updateTuple5 = doc4.update(update5);
-    data4 = clv.ops.string.exec(data4, updateTuple5.toExec);
+    data4 = clv.string.exec(data4, updateTuple5.toExec);
 
     var update6 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":1,"at":4,"value":"qw"},"execOrder":6}];
     var updateTuple6 = doc4.update(update6);
-    data4 = clv.ops.string.exec(data4, updateTuple6.toExec);
+    data4 = clv.string.exec(data4, updateTuple6.toExec);
 
     var update7 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":2,"value":"tyr"},"execOrder":7}];
     var updateTuple7 = doc4.update(update7);
-    data4 = clv.ops.string.exec(data4, updateTuple7.toExec);
+    data4 = clv.string.exec(data4, updateTuple7.toExec);
 
     var update8 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":4,"value":"lo "},"execOrder":8}];
     var updateTuple8 = doc4.update(update8);
-    data4 = clv.ops.string.exec(data4, updateTuple8.toExec);
+    data4 = clv.string.exec(data4, updateTuple8.toExec);
 
     var update9 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":3},"invCount":2,"load":{"type":1,"at":5,"value":"rl"},"execOrder":9}];
     var updateTuple9 = doc4.update(update9);
-    data4 = clv.ops.string.exec(data4, updateTuple9.toExec);
+    data4 = clv.string.exec(data4, updateTuple9.toExec);
 
     var update10 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":3},"invCount":3,"load":{"type":0,"at":5,"value":"rl"},"execOrder":10}];
     var updateTuple10 = doc4.update(update10);
-    data4 = clv.ops.string.exec(data4, updateTuple10.toExec);
+    data4 = clv.string.exec(data4, updateTuple10.toExec);
 
     var update11 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":8,"value":"yeq"},"execOrder":11}];
     var updateTuple11 = doc4.update(update11);
-    data4 = clv.ops.string.exec(data4, updateTuple11.toExec);
+    data4 = clv.string.exec(data4, updateTuple11.toExec);
 
     var update12 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":3,"value":"l"},"execOrder":12}];
     var updateTuple12 = doc4.update(update12);
-    data4 = clv.ops.string.exec(data4, updateTuple12.toExec);
+    data4 = clv.string.exec(data4, updateTuple12.toExec);
 
     var update13 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":13}];
     var updateTuple13 = doc4.update(update13);
-    data4 = clv.ops.string.exec(data4, updateTuple13.toExec);
+    data4 = clv.string.exec(data4, updateTuple13.toExec);
 
     var update14 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":14},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":2,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":15}];
     var updateTuple14 = doc4.update(update14);
-    data4 = clv.ops.string.exec(data4, updateTuple14.toExec);
+    data4 = clv.string.exec(data4, updateTuple14.toExec);
 
     var commit3 = [{"type":0,"at":7,"value":"wtt"}];
     var commitTuple3 = doc4.commit(commit3);
-    data4 = clv.ops.string.exec(data4, commitTuple3.toExec);
+    data4 = clv.string.exec(data4, commitTuple3.toExec);
 
     var update15 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":6,"value":"tq"},"execOrder":16},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":3,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":17}];
     var updateTuple15 = doc4.update(update15);
-    data4 = clv.ops.string.exec(data4, updateTuple15.toExec);
+    data4 = clv.string.exec(data4, updateTuple15.toExec);
 
     var update16 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":7,"value":"wtt"},"execOrder":18}];
     var updateTuple16 = doc4.update(update16);
-    data4 = clv.ops.string.exec(data4, updateTuple16.toExec);
+    data4 = clv.string.exec(data4, updateTuple16.toExec);
 
     var update17 = [{"siteId":"a4608370-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":3},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"e"},"execOrder":19}];
     var updateTuple17 = doc4.update(update17);
-    data4 = clv.ops.string.exec(data4, updateTuple17.toExec);
+    data4 = clv.string.exec(data4, updateTuple17.toExec);
 
     var update18 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":8,"value":"yeq"},"execOrder":20}];
     var updateTuple18 = doc4.update(update18);
-    data4 = clv.ops.string.exec(data4, updateTuple18.toExec);
+    data4 = clv.string.exec(data4, updateTuple18.toExec);
 
   });
 
   it("Site a4608370-537f-11e7-be63-5f8bb1381151 operations should be executed without errors", function() {
     var update1 = [{"siteId":"a45deb60-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":1,"value":"t"},"execOrder":1}];
     var updateTuple1 = doc5.update(update1);
-    data5 = clv.ops.string.exec(data5, updateTuple1.toExec);
+    data5 = clv.string.exec(data5, updateTuple1.toExec);
 
     var update2 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":2,"value":"tyr"},"execOrder":2}];
     var updateTuple2 = doc5.update(update2);
-    data5 = clv.ops.string.exec(data5, updateTuple2.toExec);
+    data5 = clv.string.exec(data5, updateTuple2.toExec);
 
     var update3 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"qw"},"execOrder":3},{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"rl"},"execOrder":4}];
     var updateTuple3 = doc5.update(update3);
-    data5 = clv.ops.string.exec(data5, updateTuple3.toExec);
+    data5 = clv.string.exec(data5, updateTuple3.toExec);
 
     var update4 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":0,"at":5,"value":"rl"},"execOrder":5}];
     var updateTuple4 = doc5.update(update4);
-    data5 = clv.ops.string.exec(data5, updateTuple4.toExec);
+    data5 = clv.string.exec(data5, updateTuple4.toExec);
 
     var update5 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":3},"invCount":1,"load":{"type":1,"at":4,"value":"qw"},"execOrder":6},{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":2,"value":"tyr"},"execOrder":7}];
     var updateTuple5 = doc5.update(update5);
-    data5 = clv.ops.string.exec(data5, updateTuple5.toExec);
+    data5 = clv.string.exec(data5, updateTuple5.toExec);
 
     var update6 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":4,"value":"lo "},"execOrder":8}];
     var updateTuple6 = doc5.update(update6);
-    data5 = clv.ops.string.exec(data5, updateTuple6.toExec);
+    data5 = clv.string.exec(data5, updateTuple6.toExec);
 
     var update7 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":3},"invCount":2,"load":{"type":1,"at":5,"value":"rl"},"execOrder":9}];
     var updateTuple7 = doc5.update(update7);
-    data5 = clv.ops.string.exec(data5, updateTuple7.toExec);
+    data5 = clv.string.exec(data5, updateTuple7.toExec);
 
     var update8 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":3},"invCount":3,"load":{"type":0,"at":5,"value":"rl"},"execOrder":10}];
     var updateTuple8 = doc5.update(update8);
-    data5 = clv.ops.string.exec(data5, updateTuple8.toExec);
+    data5 = clv.string.exec(data5, updateTuple8.toExec);
 
     var update9 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":8,"value":"yeq"},"execOrder":11}];
     var updateTuple9 = doc5.update(update9);
-    data5 = clv.ops.string.exec(data5, updateTuple9.toExec);
+    data5 = clv.string.exec(data5, updateTuple9.toExec);
 
     var update10 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":1,"at":3,"value":"l"},"execOrder":12}];
     var updateTuple10 = doc5.update(update10);
-    data5 = clv.ops.string.exec(data5, updateTuple10.toExec);
+    data5 = clv.string.exec(data5, updateTuple10.toExec);
 
     var update11 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":13}];
     var updateTuple11 = doc5.update(update11);
-    data5 = clv.ops.string.exec(data5, updateTuple11.toExec);
+    data5 = clv.string.exec(data5, updateTuple11.toExec);
 
     var update12 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":14}];
     var updateTuple12 = doc5.update(update12);
-    data5 = clv.ops.string.exec(data5, updateTuple12.toExec);
+    data5 = clv.string.exec(data5, updateTuple12.toExec);
 
     var update13 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":2,"load":{"type":0,"at":12,"value":"rtq"},"execOrder":15}];
     var updateTuple13 = doc5.update(update13);
-    data5 = clv.ops.string.exec(data5, updateTuple13.toExec);
+    data5 = clv.string.exec(data5, updateTuple13.toExec);
 
     var update14 = [{"siteId":"a45a9000-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":1},"invClusterSize":2},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":6,"value":"tq"},"execOrder":16}];
     var updateTuple14 = doc5.update(update14);
-    data5 = clv.ops.string.exec(data5, updateTuple14.toExec);
+    data5 = clv.string.exec(data5, updateTuple14.toExec);
 
     var update15 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":4,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":3,"load":{"type":1,"at":12,"value":"rtq"},"execOrder":17}];
     var updateTuple15 = doc5.update(update15);
-    data5 = clv.ops.string.exec(data5, updateTuple15.toExec);
+    data5 = clv.string.exec(data5, updateTuple15.toExec);
 
     var commit1 = [{"type":0,"at":12,"value":"e"}];
     var commitTuple1 = doc5.commit(commit1);
-    data5 = clv.ops.string.exec(data5, commitTuple1.toExec);
+    data5 = clv.string.exec(data5, commitTuple1.toExec);
 
     var update16 = [{"siteId":"a45f4af0-537f-11e7-be63-5f8bb1381151","seqId":2,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":2},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":2,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":7,"value":"wtt"},"execOrder":18}];
     var updateTuple16 = doc5.update(update16);
-    data5 = clv.ops.string.exec(data5, updateTuple16.toExec);
+    data5 = clv.string.exec(data5, updateTuple16.toExec);
 
     var update17 = [{"siteId":"a4608370-537f-11e7-be63-5f8bb1381151","seqId":1,"context":{"vector":{"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":4,"invCluster":{"1":1,"4":3},"invClusterSize":2},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":3},"invClusterSize":1}},"size":4},"invCount":0,"load":{"type":0,"at":12,"value":"e"},"execOrder":19}];
     var updateTuple17 = doc5.update(update17);
-    data5 = clv.ops.string.exec(data5, updateTuple17.toExec);
+    data5 = clv.string.exec(data5, updateTuple17.toExec);
 
     var update18 = [{"siteId":"a45cb2e0-537f-11e7-be63-5f8bb1381151","seqId":3,"context":{"vector":{"a45cb2e0-537f-11e7-be63-5f8bb1381151":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"a45deb60-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{},"invClusterSize":0},"a45f4af0-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1},"a45a9000-537f-11e7-be63-5f8bb1381151":{"seqId":1,"invCluster":{"1":2},"invClusterSize":1}},"size":4},"invCount":1,"load":{"type":1,"at":8,"value":"yeq"},"execOrder":20}];
     var updateTuple18 = doc5.update(update18);
-    data5 = clv.ops.string.exec(data5, updateTuple18.toExec);
+    data5 = clv.string.exec(data5, updateTuple18.toExec);
 
   });
 
@@ -437,7 +437,7 @@ describe("Generated test - rm/undo/redo/undo/rm/ins/ins/undo/rm/ins/ins/undo/red
       var server = new clv.string.Document(null, serverData.execOrder, serverData.context);
       server.update(serverData.ops);
       var serverTuple = server.update(op);
-      serverData.data = clv.ops.string.exec(serverData.data, serverTuple.toExec);
+      serverData.data = clv.string.exec(serverData.data, serverTuple.toExec);
       serverData.context = server.getContext();
       serverData.ops.push(op);
       serverData.execOrder = server.getExecOrder();

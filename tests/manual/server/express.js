@@ -89,12 +89,12 @@ function applyUpdates(documentData, updates) {
     var op = updates[i];
     // check whenever op is valid op and it will not not corrupt document
     // console.log('check', JSON.stringify(op), JSON.stringify(documentData.context))
-    if (clv.ops.canApply(op, documentData.context)) {
+    if (clv.canApply(op, documentData.context)) {
       // check whenever op is have been already applied
-      if (!clv.ops.seen(op, documentData.context)) {
+      if (!clv.seen(op, documentData.context)) {
         op.execOrder = documentData.ops.length + 1;
         var tuple = document.update(op);
-        documentData.data = clv.ops.string.exec(documentData.data, tuple.toExec);
+        documentData.data = clv.string.exec(documentData.data, tuple.toExec);
         documentData.context = document.getContext();
         documentData.ops.push(op);
         documentData.execOrder = document.getExecOrder();

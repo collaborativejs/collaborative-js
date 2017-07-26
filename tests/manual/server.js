@@ -110,7 +110,7 @@ function operationsSendingFunc(execOrder, updates, callback) {
       if (returningUpdates.length) {
         log.sites[client.document.getSiteId()].updates.push({type: 'update', ops: JSON.parse(JSON.stringify(returningUpdates))});
         var tuple = client.document.update(returningUpdates);
-        client.documentData.data = clv.ops.string.exec(client.documentData.data, tuple.toExec);
+        client.documentData.data = clv.string.exec(client.documentData.data, tuple.toExec);
       }
       callback(true, client.document.getExecOrder(), returningUpdates);
     } else {
@@ -257,7 +257,7 @@ function generateTest() {
       if (update.type == 'commit') {
         test += '    var commit' + commitIndex + ' = ' + JSON.stringify(update.ops) + ';\n';
         test += '    var commitTuple' + commitIndex + ' = doc' + index + '.commit(commit' + commitIndex + ');\n';
-        test += '    data' + index + ' = clv.ops.string.exec(data' + index + ', commitTuple' + commitIndex + '.toExec);\n';
+        test += '    data' + index + ' = clv.string.exec(data' + index + ', commitTuple' + commitIndex + '.toExec);\n';
         commitIndex++;
 
         for (var oi = 0, oiCount = update.ops.length; oi < oiCount; oi++) {
@@ -268,7 +268,7 @@ function generateTest() {
       } else if (update.type == 'update') {
         test += '    var update' + updateIndex + ' = ' + JSON.stringify(update.ops) + ';\n';
         test += '    var updateTuple' + updateIndex + ' = doc' + index + '.update(update' + updateIndex + ');\n';
-        test += '    data' + index + ' = clv.ops.string.exec(data' + index + ', updateTuple' + updateIndex + '.toExec);\n';
+        test += '    data' + index + ' = clv.string.exec(data' + index + ', updateTuple' + updateIndex + '.toExec);\n';
         updateIndex++;
 
         for (var o = 0, oCount = update.ops.length; o < oCount; o++) {
@@ -277,12 +277,12 @@ function generateTest() {
         }
       } else if (update.type == 'undo') {
         test += '    var commitTuple' + commitIndex + ' = doc' + index + '.undo();\n';
-        test += '    data' + index + ' = clv.ops.string.exec(data' + index + ', commitTuple' + commitIndex + '.toExec);\n';
+        test += '    data' + index + ' = clv.string.exec(data' + index + ', commitTuple' + commitIndex + '.toExec);\n';
         commitIndex++;
         summary.push('undo');
       } else {
         test += '    var commitTuple' + commitIndex + ' = doc' + index + '.redo();\n';
-        test += '    data' + index + ' = clv.ops.string.exec(data' + index + ', commitTuple' + commitIndex + '.toExec);\n';
+        test += '    data' + index + ' = clv.string.exec(data' + index + ', commitTuple' + commitIndex + '.toExec);\n';
         commitIndex++;
         summary.push('redo');
       }
@@ -311,7 +311,7 @@ function generateTest() {
   test += '      server.update(serverData.ops);\n';
 
   test += '      var serverTuple = server.update(op);\n';
-  test += '      serverData.data = clv.ops.string.exec(serverData.data, serverTuple.toExec);\n';
+  test += '      serverData.data = clv.string.exec(serverData.data, serverTuple.toExec);\n';
   test += '      serverData.context = server.getContext();\n';
   test += '      serverData.ops.push(op);\n';
   test += '      serverData.execOrder = server.getExecOrder();\n';
@@ -365,7 +365,7 @@ function generateOps(client) {
       log.sites[client.document.getSiteId()].updates.push({type: 'commit', ops: tmp[1]});
     }
 
-    client.documentData.data = clv.ops.string.exec(client.documentData.data, tuple.toExec);
+    client.documentData.data = clv.string.exec(client.documentData.data, tuple.toExec);
     result = result.concat(tuple.toSend);
   }
 
@@ -447,7 +447,7 @@ function addOpsToLog(opsLog, ops) {
  * @param {string} str
  * @param {Array.<string>=} opt_alphabet
  * @param {number=} opt_maxCount
- * @return {Array<!clv.ops.string.Operation>}
+ * @return {Array<!clv.string.Operation>}
  */
 function getRandInsOps(str, opt_alphabet, opt_maxCount) {
   if (!opt_maxCount) opt_maxCount = 3;
@@ -469,14 +469,14 @@ function getRandInsOps(str, opt_alphabet, opt_maxCount) {
     str.slice(insIndex)
   ].join('');
 
-  return clv.ops.string.genOps(str, newData);
+  return clv.string.genOps(str, newData);
 }
 
 
 /**
  * @param {string} str
  * @param {number=} opt_maxCount
- * @return {Array<!clv.ops.string.Operation>}
+ * @return {Array<!clv.string.Operation>}
  */
 function getRandRmOps(str, opt_maxCount) {
   var result = null;
@@ -485,7 +485,7 @@ function getRandRmOps(str, opt_maxCount) {
     var rmIndex = Math.floor(Math.random() * (str.length - 1));
     var rmCount = Math.min(Math.floor(Math.random() * opt_maxCount) + 1, str.length - rmIndex);
     var newData = str.replace(str.substring(rmIndex, rmIndex + rmCount), '');
-    result = clv.ops.string.genOps(str, newData);
+    result = clv.string.genOps(str, newData);
   }
   return result;
 }

@@ -11,316 +11,316 @@ describe("Generated test - ins/rm/rm/undo/undo/rm/rm/rm/rm/ins/ins/rm/ins/rm/ins
   it("Site 2255aa80-5353-11e7-bd9f-0b883f662695 operations should be executed without errors", function() {
     var update1 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":8,"value":"q"},"execOrder":1}];
     var updateTuple1 = doc1.update(update1);
-    data1 = clv.ops.string.exec(data1, updateTuple1.toExec);
+    data1 = clv.string.exec(data1, updateTuple1.toExec);
 
     var commit1 = [{"type":0,"at":7,"value":"ttt"}];
     var commitTuple1 = doc1.commit(commit1);
-    data1 = clv.ops.string.exec(data1, commitTuple1.toExec);
+    data1 = clv.string.exec(data1, commitTuple1.toExec);
 
     var update2 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":1,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":8,"value":"q"},"execOrder":2},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":1,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":0,"load":{"type":0,"at":7,"value":"ttt"},"execOrder":3}];
     var updateTuple2 = doc1.update(update2);
-    data1 = clv.ops.string.exec(data1, updateTuple2.toExec);
+    data1 = clv.string.exec(data1, updateTuple2.toExec);
 
     var update3 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":2,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":1},"invCount":0,"load":{"type":0,"at":10,"value":"ete"},"execOrder":4}];
     var updateTuple3 = doc1.update(update3);
-    data1 = clv.ops.string.exec(data1, updateTuple3.toExec);
+    data1 = clv.string.exec(data1, updateTuple3.toExec);
 
     var update4 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":3,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":16,"value":"e"},"execOrder":5}];
     var updateTuple4 = doc1.update(update4);
-    data1 = clv.ops.string.exec(data1, updateTuple4.toExec);
+    data1 = clv.string.exec(data1, updateTuple4.toExec);
 
     var commit2 = [{"type":1,"at":8,"value":"tt"}];
     var commitTuple2 = doc1.commit(commit2);
-    data1 = clv.ops.string.exec(data1, commitTuple2.toExec);
+    data1 = clv.string.exec(data1, commitTuple2.toExec);
 
     var update5 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":4,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":9,"value":"t"},"execOrder":6},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":2,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":8,"value":"tt"},"execOrder":7}];
     var updateTuple5 = doc1.update(update5);
-    data1 = clv.ops.string.exec(data1, updateTuple5.toExec);
+    data1 = clv.string.exec(data1, updateTuple5.toExec);
 
     var commit3 = [{"type":1,"at":9,"value":"rle"}];
     var commitTuple3 = doc1.commit(commit3);
-    data1 = clv.ops.string.exec(data1, commitTuple3.toExec);
+    data1 = clv.string.exec(data1, commitTuple3.toExec);
 
     var update6 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":3,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":9,"value":"rle"},"execOrder":8}];
     var updateTuple6 = doc1.update(update6);
-    data1 = clv.ops.string.exec(data1, updateTuple6.toExec);
+    data1 = clv.string.exec(data1, updateTuple6.toExec);
 
     var commitTuple4 = doc1.undo();
-    data1 = clv.ops.string.exec(data1, commitTuple4.toExec);
+    data1 = clv.string.exec(data1, commitTuple4.toExec);
 
     var commitTuple5 = doc1.undo();
-    data1 = clv.ops.string.exec(data1, commitTuple5.toExec);
+    data1 = clv.string.exec(data1, commitTuple5.toExec);
 
     var update7 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":5,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":7,"value":"tor"},"execOrder":9},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":3,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":1,"load":{"type":0,"at":9,"value":"rle"},"execOrder":10}];
     var updateTuple7 = doc1.update(update7);
-    data1 = clv.ops.string.exec(data1, updateTuple7.toExec);
+    data1 = clv.string.exec(data1, updateTuple7.toExec);
 
     var commit6 = [{"type":1,"at":5,"value":" W"}];
     var commitTuple6 = doc1.commit(commit6);
-    data1 = clv.ops.string.exec(data1, commitTuple6.toExec);
+    data1 = clv.string.exec(data1, commitTuple6.toExec);
 
     var update8 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":2,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":1,"load":{"type":0,"at":8,"value":"tt"},"execOrder":11}];
     var updateTuple8 = doc1.update(update8);
-    data1 = clv.ops.string.exec(data1, updateTuple8.toExec);
+    data1 = clv.string.exec(data1, updateTuple8.toExec);
 
     var update9 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":4,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":" W"},"execOrder":12}];
     var updateTuple9 = doc1.update(update9);
-    data1 = clv.ops.string.exec(data1, updateTuple9.toExec);
+    data1 = clv.string.exec(data1, updateTuple9.toExec);
 
     var commit7 = [{"type":1,"at":2,"value":"ll"}];
     var commitTuple7 = doc1.commit(commit7);
-    data1 = clv.ops.string.exec(data1, commitTuple7.toExec);
+    data1 = clv.string.exec(data1, commitTuple7.toExec);
 
     var update10 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":6,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":10,"value":"ee"},"execOrder":13}];
     var updateTuple10 = doc1.update(update10);
-    data1 = clv.ops.string.exec(data1, updateTuple10.toExec);
+    data1 = clv.string.exec(data1, updateTuple10.toExec);
 
     var commit8 = [{"type":1,"at":2,"value":"o"}];
     var commitTuple8 = doc1.commit(commit8);
-    data1 = clv.ops.string.exec(data1, commitTuple8.toExec);
+    data1 = clv.string.exec(data1, commitTuple8.toExec);
 
     var update11 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":5,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":2,"value":"ll"},"execOrder":14}];
     var updateTuple11 = doc1.update(update11);
-    data1 = clv.ops.string.exec(data1, updateTuple11.toExec);
+    data1 = clv.string.exec(data1, updateTuple11.toExec);
 
     var update12 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":6,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":2,"value":"o"},"execOrder":15}];
     var updateTuple12 = doc1.update(update12);
-    data1 = clv.ops.string.exec(data1, updateTuple12.toExec);
+    data1 = clv.string.exec(data1, updateTuple12.toExec);
 
     var commit9 = [{"type":1,"at":2,"value":"le"}];
     var commitTuple9 = doc1.commit(commit9);
-    data1 = clv.ops.string.exec(data1, commitTuple9.toExec);
+    data1 = clv.string.exec(data1, commitTuple9.toExec);
 
     var update13 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":7,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":6,"value":"r"},"execOrder":16},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":7,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":2,"value":"le"},"execOrder":17}];
     var updateTuple13 = doc1.update(update13);
-    data1 = clv.ops.string.exec(data1, updateTuple13.toExec);
+    data1 = clv.string.exec(data1, updateTuple13.toExec);
 
     var commit10 = [{"type":0,"at":4,"value":"ee"}];
     var commitTuple10 = doc1.commit(commit10);
-    data1 = clv.ops.string.exec(data1, commitTuple10.toExec);
+    data1 = clv.string.exec(data1, commitTuple10.toExec);
 
     var update14 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":8,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"td"},"execOrder":18}];
     var updateTuple14 = doc1.update(update14);
-    data1 = clv.ops.string.exec(data1, updateTuple14.toExec);
+    data1 = clv.string.exec(data1, updateTuple14.toExec);
 
     var update15 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":8,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"ee"},"execOrder":19}];
     var updateTuple15 = doc1.update(update15);
-    data1 = clv.ops.string.exec(data1, updateTuple15.toExec);
+    data1 = clv.string.exec(data1, updateTuple15.toExec);
 
     var update16 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":9,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":2,"value":"re"},"execOrder":20}];
     var updateTuple16 = doc1.update(update16);
-    data1 = clv.ops.string.exec(data1, updateTuple16.toExec);
+    data1 = clv.string.exec(data1, updateTuple16.toExec);
 
     var commit11 = [{"type":0,"at":4,"value":"r"}];
     var commitTuple11 = doc1.commit(commit11);
-    data1 = clv.ops.string.exec(data1, commitTuple11.toExec);
+    data1 = clv.string.exec(data1, commitTuple11.toExec);
 
     var update17 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":9,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":1,"load":{"type":1,"at":2,"value":"re"},"execOrder":21},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":9,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"r"},"execOrder":22}];
     var updateTuple17 = doc1.update(update17);
-    data1 = clv.ops.string.exec(data1, updateTuple17.toExec);
+    data1 = clv.string.exec(data1, updateTuple17.toExec);
 
     var commit12 = [{"type":1,"at":0,"value":"He"}];
     var commitTuple12 = doc1.commit(commit12);
-    data1 = clv.ops.string.exec(data1, commitTuple12.toExec);
+    data1 = clv.string.exec(data1, commitTuple12.toExec);
 
     var update18 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":10,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":2,"value":"wte"},"execOrder":23}];
     var updateTuple18 = doc1.update(update18);
-    data1 = clv.ops.string.exec(data1, updateTuple18.toExec);
+    data1 = clv.string.exec(data1, updateTuple18.toExec);
 
     var commit13 = [{"type":0,"at":0,"value":"r"}];
     var commitTuple13 = doc1.commit(commit13);
-    data1 = clv.ops.string.exec(data1, commitTuple13.toExec);
+    data1 = clv.string.exec(data1, commitTuple13.toExec);
 
     var update19 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":10,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":0,"value":"He"},"execOrder":24}];
     var updateTuple19 = doc1.update(update19);
-    data1 = clv.ops.string.exec(data1, updateTuple19.toExec);
+    data1 = clv.string.exec(data1, updateTuple19.toExec);
 
     var commit14 = [{"type":1,"at":0,"value":"r"}];
     var commitTuple14 = doc1.commit(commit14);
-    data1 = clv.ops.string.exec(data1, commitTuple14.toExec);
+    data1 = clv.string.exec(data1, commitTuple14.toExec);
 
     var update20 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":11,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":0,"value":"r"},"execOrder":25}];
     var updateTuple20 = doc1.update(update20);
-    data1 = clv.ops.string.exec(data1, updateTuple20.toExec);
+    data1 = clv.string.exec(data1, updateTuple20.toExec);
 
     var update21 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":12,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":11,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":0,"value":"r"},"execOrder":26}];
     var updateTuple21 = doc1.update(update21);
-    data1 = clv.ops.string.exec(data1, updateTuple21.toExec);
+    data1 = clv.string.exec(data1, updateTuple21.toExec);
 
     var update22 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":10,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":1,"load":{"type":1,"at":2,"value":"wte"},"execOrder":27}];
     var updateTuple22 = doc1.update(update22);
-    data1 = clv.ops.string.exec(data1, updateTuple22.toExec);
+    data1 = clv.string.exec(data1, updateTuple22.toExec);
 
     var commit15 = [{"type":0,"at":0,"value":"we"}];
     var commitTuple15 = doc1.commit(commit15);
-    data1 = clv.ops.string.exec(data1, commitTuple15.toExec);
+    data1 = clv.string.exec(data1, commitTuple15.toExec);
 
     var update23 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":11,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1,"10":1},"invClusterSize":3},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":12,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":0,"value":"ryq"},"execOrder":28}];
     var updateTuple23 = doc1.update(update23);
-    data1 = clv.ops.string.exec(data1, updateTuple23.toExec);
+    data1 = clv.string.exec(data1, updateTuple23.toExec);
 
     var update24 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":11,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":11,"invCluster":{"1":1,"9":1,"10":1},"invClusterSize":3},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":12,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":1,"load":{"type":1,"at":0,"value":"ryq"},"execOrder":29},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":13,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1,"10":1},"invClusterSize":3},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":12,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":0,"value":"we"},"execOrder":30}];
     var updateTuple24 = doc1.update(update24);
-    data1 = clv.ops.string.exec(data1, updateTuple24.toExec);
+    data1 = clv.string.exec(data1, updateTuple24.toExec);
 
   });
 
   it("Site 2257a650-5353-11e7-bd9f-0b883f662695 operations should be executed without errors", function() {
     var commit1 = [{"type":0,"at":8,"value":"q"}];
     var commitTuple1 = doc2.commit(commit1);
-    data2 = clv.ops.string.exec(data2, commitTuple1.toExec);
+    data2 = clv.string.exec(data2, commitTuple1.toExec);
 
     var commitTuple2 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple2.toExec);
+    data2 = clv.string.exec(data2, commitTuple2.toExec);
 
     var update1 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":1,"context":{"vector":{},"size":0},"invCount":0,"load":{"type":0,"at":8,"value":"q"},"execOrder":1}];
     var updateTuple1 = doc2.update(update1);
-    data2 = clv.ops.string.exec(data2, updateTuple1.toExec);
+    data2 = clv.string.exec(data2, updateTuple1.toExec);
 
     var update2 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":1,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":1,"load":{"type":1,"at":8,"value":"q"},"execOrder":2}];
     var updateTuple2 = doc2.update(update2);
-    data2 = clv.ops.string.exec(data2, updateTuple2.toExec);
+    data2 = clv.string.exec(data2, updateTuple2.toExec);
 
     var commit3 = [{"type":0,"at":10,"value":"ete"}];
     var commitTuple3 = doc2.commit(commit3);
-    data2 = clv.ops.string.exec(data2, commitTuple3.toExec);
+    data2 = clv.string.exec(data2, commitTuple3.toExec);
 
     var update3 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":1,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":1},"invCount":0,"load":{"type":0,"at":7,"value":"ttt"},"execOrder":3}];
     var updateTuple3 = doc2.update(update3);
-    data2 = clv.ops.string.exec(data2, updateTuple3.toExec);
+    data2 = clv.string.exec(data2, updateTuple3.toExec);
 
     var update4 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":2,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{"1":1},"invClusterSize":1}},"size":1},"invCount":0,"load":{"type":0,"at":10,"value":"ete"},"execOrder":4}];
     var updateTuple4 = doc2.update(update4);
-    data2 = clv.ops.string.exec(data2, updateTuple4.toExec);
+    data2 = clv.string.exec(data2, updateTuple4.toExec);
 
     var commit4 = [{"type":0,"at":16,"value":"e"}];
     var commitTuple4 = doc2.commit(commit4);
-    data2 = clv.ops.string.exec(data2, commitTuple4.toExec);
+    data2 = clv.string.exec(data2, commitTuple4.toExec);
 
     var update5 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":3,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":0,"at":16,"value":"e"},"execOrder":5}];
     var updateTuple5 = doc2.update(update5);
-    data2 = clv.ops.string.exec(data2, updateTuple5.toExec);
+    data2 = clv.string.exec(data2, updateTuple5.toExec);
 
     var commit5 = [{"type":1,"at":9,"value":"t"}];
     var commitTuple5 = doc2.commit(commit5);
-    data2 = clv.ops.string.exec(data2, commitTuple5.toExec);
+    data2 = clv.string.exec(data2, commitTuple5.toExec);
 
     var update6 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":4,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":9,"value":"t"},"execOrder":6}];
     var updateTuple6 = doc2.update(update6);
-    data2 = clv.ops.string.exec(data2, updateTuple6.toExec);
+    data2 = clv.string.exec(data2, updateTuple6.toExec);
 
     var update7 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":2,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":1,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":8,"value":"tt"},"execOrder":7}];
     var updateTuple7 = doc2.update(update7);
-    data2 = clv.ops.string.exec(data2, updateTuple7.toExec);
+    data2 = clv.string.exec(data2, updateTuple7.toExec);
 
     var commit6 = [{"type":1,"at":7,"value":"tor"}];
     var commitTuple6 = doc2.commit(commit6);
-    data2 = clv.ops.string.exec(data2, commitTuple6.toExec);
+    data2 = clv.string.exec(data2, commitTuple6.toExec);
 
     var update8 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":3,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":9,"value":"rle"},"execOrder":8}];
     var updateTuple8 = doc2.update(update8);
-    data2 = clv.ops.string.exec(data2, updateTuple8.toExec);
+    data2 = clv.string.exec(data2, updateTuple8.toExec);
 
     var update9 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":5,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":0,"load":{"type":1,"at":7,"value":"tor"},"execOrder":9}];
     var updateTuple9 = doc2.update(update9);
-    data2 = clv.ops.string.exec(data2, updateTuple9.toExec);
+    data2 = clv.string.exec(data2, updateTuple9.toExec);
 
     var update10 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":3,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":1,"load":{"type":0,"at":9,"value":"rle"},"execOrder":10},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":2,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":2,"invCluster":{},"invClusterSize":0}},"size":2},"invCount":1,"load":{"type":0,"at":8,"value":"tt"},"execOrder":11}];
     var updateTuple10 = doc2.update(update10);
-    data2 = clv.ops.string.exec(data2, updateTuple10.toExec);
+    data2 = clv.string.exec(data2, updateTuple10.toExec);
 
     var commit7 = [{"type":1,"at":10,"value":"ee"}];
     var commitTuple7 = doc2.commit(commit7);
-    data2 = clv.ops.string.exec(data2, commitTuple7.toExec);
+    data2 = clv.string.exec(data2, commitTuple7.toExec);
 
     var update11 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":4,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":" W"},"execOrder":12},{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":6,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":3,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":10,"value":"ee"},"execOrder":13}];
     var updateTuple11 = doc2.update(update11);
-    data2 = clv.ops.string.exec(data2, updateTuple11.toExec);
+    data2 = clv.string.exec(data2, updateTuple11.toExec);
 
     var commit8 = [{"type":0,"at":6,"value":"r"}];
     var commitTuple8 = doc2.commit(commit8);
-    data2 = clv.ops.string.exec(data2, commitTuple8.toExec);
+    data2 = clv.string.exec(data2, commitTuple8.toExec);
 
     var update12 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":5,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":2,"value":"ll"},"execOrder":14},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":6,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":5,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":2,"value":"o"},"execOrder":15}];
     var updateTuple12 = doc2.update(update12);
-    data2 = clv.ops.string.exec(data2, updateTuple12.toExec);
+    data2 = clv.string.exec(data2, updateTuple12.toExec);
 
     var update13 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":7,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":4,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":6,"value":"r"},"execOrder":16}];
     var updateTuple13 = doc2.update(update13);
-    data2 = clv.ops.string.exec(data2, updateTuple13.toExec);
+    data2 = clv.string.exec(data2, updateTuple13.toExec);
 
     var commit9 = [{"type":1,"at":5,"value":"td"}];
     var commitTuple9 = doc2.commit(commit9);
-    data2 = clv.ops.string.exec(data2, commitTuple9.toExec);
+    data2 = clv.string.exec(data2, commitTuple9.toExec);
 
     var update14 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":7,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":2,"value":"le"},"execOrder":17}];
     var updateTuple14 = doc2.update(update14);
-    data2 = clv.ops.string.exec(data2, updateTuple14.toExec);
+    data2 = clv.string.exec(data2, updateTuple14.toExec);
 
     var update15 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":8,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":6,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":5,"value":"td"},"execOrder":18}];
     var updateTuple15 = doc2.update(update15);
-    data2 = clv.ops.string.exec(data2, updateTuple15.toExec);
+    data2 = clv.string.exec(data2, updateTuple15.toExec);
 
     var commit10 = [{"type":0,"at":2,"value":"re"}];
     var commitTuple10 = doc2.commit(commit10);
-    data2 = clv.ops.string.exec(data2, commitTuple10.toExec);
+    data2 = clv.string.exec(data2, commitTuple10.toExec);
 
     var update16 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":8,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"ee"},"execOrder":19}];
     var updateTuple16 = doc2.update(update16);
-    data2 = clv.ops.string.exec(data2, updateTuple16.toExec);
+    data2 = clv.string.exec(data2, updateTuple16.toExec);
 
     var commitTuple11 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple11.toExec);
+    data2 = clv.string.exec(data2, commitTuple11.toExec);
 
     var update17 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":9,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":2,"value":"re"},"execOrder":20}];
     var updateTuple17 = doc2.update(update17);
-    data2 = clv.ops.string.exec(data2, updateTuple17.toExec);
+    data2 = clv.string.exec(data2, updateTuple17.toExec);
 
     var update18 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":9,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":7,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":1,"load":{"type":1,"at":2,"value":"re"},"execOrder":21}];
     var updateTuple18 = doc2.update(update18);
-    data2 = clv.ops.string.exec(data2, updateTuple18.toExec);
+    data2 = clv.string.exec(data2, updateTuple18.toExec);
 
     var commit12 = [{"type":0,"at":2,"value":"wte"}];
     var commitTuple12 = doc2.commit(commit12);
-    data2 = clv.ops.string.exec(data2, commitTuple12.toExec);
+    data2 = clv.string.exec(data2, commitTuple12.toExec);
 
     var update19 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":9,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1},"invClusterSize":1},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":4,"value":"r"},"execOrder":22},{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":10,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":2,"value":"wte"},"execOrder":23}];
     var updateTuple19 = doc2.update(update19);
-    data2 = clv.ops.string.exec(data2, updateTuple19.toExec);
+    data2 = clv.string.exec(data2, updateTuple19.toExec);
 
     var update20 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":10,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":9,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":0,"value":"He"},"execOrder":24},{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":11,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":0,"value":"r"},"execOrder":25}];
     var updateTuple20 = doc2.update(update20);
-    data2 = clv.ops.string.exec(data2, updateTuple20.toExec);
+    data2 = clv.string.exec(data2, updateTuple20.toExec);
 
     var commitTuple13 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple13.toExec);
+    data2 = clv.string.exec(data2, commitTuple13.toExec);
 
     var update21 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":12,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":11,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":1,"at":0,"value":"r"},"execOrder":26}];
     var updateTuple21 = doc2.update(update21);
-    data2 = clv.ops.string.exec(data2, updateTuple21.toExec);
+    data2 = clv.string.exec(data2, updateTuple21.toExec);
 
     var update22 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":10,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1},"invClusterSize":2},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":8,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":1,"load":{"type":1,"at":2,"value":"wte"},"execOrder":27}];
     var updateTuple22 = doc2.update(update22);
-    data2 = clv.ops.string.exec(data2, updateTuple22.toExec);
+    data2 = clv.string.exec(data2, updateTuple22.toExec);
 
     var commit14 = [{"type":0,"at":0,"value":"ryq"}];
     var commitTuple14 = doc2.commit(commit14);
-    data2 = clv.ops.string.exec(data2, commitTuple14.toExec);
+    data2 = clv.string.exec(data2, commitTuple14.toExec);
 
     var commitTuple15 = doc2.undo();
-    data2 = clv.ops.string.exec(data2, commitTuple15.toExec);
+    data2 = clv.string.exec(data2, commitTuple15.toExec);
 
     var update23 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":11,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1,"10":1},"invClusterSize":3},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":12,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":0,"value":"ryq"},"execOrder":28}];
     var updateTuple23 = doc2.update(update23);
-    data2 = clv.ops.string.exec(data2, updateTuple23.toExec);
+    data2 = clv.string.exec(data2, updateTuple23.toExec);
 
     var update24 = [{"siteId":"2257a650-5353-11e7-bd9f-0b883f662695","seqId":11,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":11,"invCluster":{"1":1,"9":1,"10":1},"invClusterSize":3},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":12,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":1,"load":{"type":1,"at":0,"value":"ryq"},"execOrder":29}];
     var updateTuple24 = doc2.update(update24);
-    data2 = clv.ops.string.exec(data2, updateTuple24.toExec);
+    data2 = clv.string.exec(data2, updateTuple24.toExec);
 
     var update25 = [{"siteId":"2255aa80-5353-11e7-bd9f-0b883f662695","seqId":13,"context":{"vector":{"2257a650-5353-11e7-bd9f-0b883f662695":{"seqId":10,"invCluster":{"1":1,"9":1,"10":1},"invClusterSize":3},"2255aa80-5353-11e7-bd9f-0b883f662695":{"seqId":12,"invCluster":{"2":1,"3":1},"invClusterSize":2}},"size":2},"invCount":0,"load":{"type":0,"at":0,"value":"we"},"execOrder":30}];
     var updateTuple25 = doc2.update(update25);
-    data2 = clv.ops.string.exec(data2, updateTuple25.toExec);
+    data2 = clv.string.exec(data2, updateTuple25.toExec);
 
   });
 
@@ -329,7 +329,7 @@ describe("Generated test - ins/rm/rm/undo/undo/rm/rm/rm/rm/ins/ins/rm/ins/rm/ins
       var server = new clv.string.Document(null, serverData.execOrder, serverData.context);
       server.update(serverData.ops);
       var serverTuple = server.update(op);
-      serverData.data = clv.ops.string.exec(serverData.data, serverTuple.toExec);
+      serverData.data = clv.string.exec(serverData.data, serverTuple.toExec);
       serverData.context = server.getContext();
       serverData.ops.push(op);
       serverData.execOrder = server.getExecOrder();
