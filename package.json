@@ -3,7 +3,7 @@
   "version": "0.0.13",
   "description": "Collaborative software for any project",
   "scripts": {
-    "test": "mocha --reporter spec --recursive tests/automatic 2>&1 | tee out/tests_report.txt"
+    "test": "mocha --reporter spec --recursive tests/automatic"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "contributors": [
     "Roman Lubushkin <roman.lubushkin@collaborativejs.org>",
     "Anton Saukh <anton.saukh@collaborativejs.org>"
-  ]
+  ],
+  "dependencies": {
+    "mocha": "^3.5.0"
+  }
 }
