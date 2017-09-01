@@ -16,5 +16,3 @@ Collaborative software for any project
 
 ## License
 Collaborative.js is distributed under commercial license, see [license page](http://collaborativejs.org/buy) for details.
-  
-[© Collaborativejs.org - Collaborative software for any project](http://collaborativehs.org). All rights reserved.
