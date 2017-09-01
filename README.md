@@ -1,4 +1,4 @@
-[<img src="http://collaborativejs.org/img/logo-transparent-color.png" width="100px" align="left" alt="Collaborative.js - Collaborative software for any project">](http://collaborativejs.org)
+[<img src="http://collaborativejs.org/img/logo-transparent-color.png" width="100px" align="center" alt="Collaborative.js - Collaborative software for any project">](http://collaborativejs.org)
 <h1 align="center">Collaborative.js</h1>
 
   
