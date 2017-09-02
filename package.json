@@ -1,9 +1,9 @@
 {
   "name": "collaborative",
-  "version": "0.0.13",
-  "description": "Collaborative software for any project",
+  "version": "0.0.14",
+  "description": "JavaScript library to build applications and web-services with collaborative access to the data (live data editing).",
   "scripts": {
-    "test": "mocha --reporter spec --recursive tests/automatic"
+    "test": "mocha --reporter spec --recursive tests/automatic 2>&1 | tee out/tests_report.txt"
   },
   "repository": {
     "type": "git",
@@ -13,11 +13,19 @@
     "url": "https://github.com/collaborativejs/collaborativej-s/issues"
   },
   "keywords": [
-    "Collaborative Documents",
     "Collaborative Software",
-    "JavaScript",
-    "NodeJS",
-    "Live Editing"
+    "Shared Access",
+    "Groupware",
+    "Live Editing",
+    "Rich Text",
+    "Plain Text",
+    "Undo",
+    "Redo",
+    "Operations History",
+    "Offline Mode",
+    "JavaScript Library",
+    "Node.js",
+    "Protobuf"
   ],
   "author": "CollaborativeJS <contact@collaborativejs.org> (http://collaborativejs.org)",
   "license": "SEE LICENSE IN <http://collaborativejs.org/buy>",
@@ -25,8 +33,5 @@
   "contributors": [
     "Roman Lubushkin <roman.lubushkin@collaborativejs.org>",
     "Anton Saukh <anton.saukh@collaborativejs.org>"
-  ],
-  "dependencies": {
-    "mocha": "^3.5.0"
-  }
+  ]
 }
