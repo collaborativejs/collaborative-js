@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/collaborativejs/collaborative-js.svg?style=shield)](https://circleci.com/gh/collaborativejs/collaborative-js)
 [![github issues](https://img.shields.io/github/issues/collaborativejs/collaborative-js.svg)](https://github.com/collaborativejs/collaborative-js/issues) 
 
-Coming soon...
+Collaborative.js is a JavaScript library to build applications and web-services with collaborative access to the data (live data editing)
   
   
 ## Features
@@ -49,6 +49,41 @@ Coming soon...
         </td>
     </tr>
 </table>
+
+## Download
+
+#### Using Package Mangers
+You can install Collaborative.js using any of popular package managers.
+  
+| npm | Bower | Yarn |
+| ------------- | ------------- | ------------- |
+| ```npm install collaborative```  | ```bower install collaborative```  | ```yarn add collaborative```  |
+
+#### Using CDN
+Collaborative.js is available as a ready-to-include CDN resource.
+  
+* jsDeliver CDN - `https://cdn.jsdelivr.net/npm/collaborative/dist/collaborative.min.js`
+* unpkg CDN - `https://unpkg.com/collaborative/dist/collaborative.min.js`
+
+#### Direct Download
+All Collaborative.js binary files can be found in [dist directory](https://github.com/collaborativejs/collaborative-js/tree/master/dist) of the master github branch or
+[collaborative-js.zip](https://github.com/collaborativejs/collaborative-js/archive/master.zip) archive.
+ 
+ 
+## Getting Started
+[Getting Started guide](http://collaborativejs.org/docs/getting-started) leads through the most basic tasks of the 
+collaborative access topic. During this guide we will build a simple Node.js application with collaborative access 
+to a plain text (text live editing).
+
+Note: If you prefere to run getting started example first, visit [getting-started-example repo](https://github.com/collaborativejs/getting-started-example) 
+
+
+## Demo
+| Rich Text Editor Demo | JSON Structure Demo|
+| ------------- | ------------- |
+| [<img src="http://collaborativejs.org/img/landing/rich-text-demo.png" alt="Rich Text demo with collaborative access (text live editing) \| Collaborative.js">](http://collaborativejs.org/demos/rich-text-editor-demo)  | [<img src="http://collaborativejs.org/img/landing/json-structure-demo.png" alt="JSON structure demo with collaborative access (data live editing) \| Collaborative.js">](http://collaborativejs.org/)  |
+| [View Source](https://github.com/collaborativejs/rich-text-editor-demo) | Coming soon...  |
+
 
 ## Further Learning
 * [Documentation](http://collaborativejs.org/docs)
