@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var uuid = require('uuid');
-var clv = require('collaborativejs');
+var clv = require("../../../index.js");
 
 // create in-memory storage
 var storage = {};

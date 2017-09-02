@@ -1,6 +1,6 @@
 var request = require('request');
 var uuid = require('uuid');
-var clv = require('collaborativejs');
+var clv = require("../../index.js");
 
 // region ---- start server
 console.log('Waiting for the server to startup');

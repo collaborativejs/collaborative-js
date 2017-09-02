@@ -1,4 +1,4 @@
-var clv = require('collaborativejs');
+var clv = require("../../index.js");
 var assert = require('assert');
 
 // test sets
