@@ -3,9 +3,37 @@
 [![CircleCI](https://circleci.com/gh/collaborativejs/collaborative-js.svg?style=shield)](https://circleci.com/gh/collaborativejs/collaborative-js)
 [![github issues](https://img.shields.io/github/issues/collaborativejs/collaborative-js.svg)](https://github.com/collaborativejs/collaborative-js/issues) 
 
-Collaborative.js is a JavaScript library to build applications and web-services with collaborative access to the data (live data editing)
+Collaborative.js is a JavaScript library to build applications and web-services with collaborative access to the data (live data editing).
   
+Our mission is to completely solve the issue of implementing collaborative access to the data for all kind of web services and applications. We examine this topic in a comprehensive manner, scrupulously gathering use cases and feedback to provide a consistent solution for all popular programming languages and platforms. This repository is about JavaScript.
+
+## Download
+
+#### Using Package Mangers
+You can install Collaborative.js using any of popular package managers.
   
+| npm | Bower | Yarn |
+| ------------- | ------------- | ------------- |
+| ```npm install collaborative```  | ```bower install collaborative```  | ```yarn add collaborative```  |
+
+#### Using CDN
+Collaborative.js is available as a ready-to-include CDN resource.
+  
+* jsDeliver CDN - `https://cdn.jsdelivr.net/npm/collaborative/dist/collaborative.min.js`
+* unpkg CDN - `https://unpkg.com/collaborative/dist/collaborative.min.js`
+
+#### Direct Download
+All Collaborative.js binary files can be found in [dist directory](https://github.com/collaborativejs/collaborative-js/tree/master/dist) of the master github branch or
+[collaborative-js.zip](https://github.com/collaborativejs/collaborative-js/archive/master.zip) archive.
+ 
+ 
+## Getting Started
+[Getting Started guide](http://collaborativejs.org/docs/getting-started) leads through the most basic tasks of the 
+collaborative access topic. During this guide we will build a simple Node.js application with collaborative access 
+to a plain text (text live editing).
+
+Note: If you prefere to run getting started example first, visit [getting-started-example repo](https://github.com/collaborativejs/getting-started-example)
+ 
 ## Features
 <table>
     <tr>
@@ -48,34 +76,7 @@ Collaborative.js is a JavaScript library to build applications and web-services 
             All major browsers including legacy versions e.g IE 6 are supported.
         </td>
     </tr>
-</table>
-
-## Download
-
-#### Using Package Mangers
-You can install Collaborative.js using any of popular package managers.
-  
-| npm | Bower | Yarn |
-| ------------- | ------------- | ------------- |
-| ```npm install collaborative```  | ```bower install collaborative```  | ```yarn add collaborative```  |
-
-#### Using CDN
-Collaborative.js is available as a ready-to-include CDN resource.
-  
-* jsDeliver CDN - `https://cdn.jsdelivr.net/npm/collaborative/dist/collaborative.min.js`
-* unpkg CDN - `https://unpkg.com/collaborative/dist/collaborative.min.js`
-
-#### Direct Download
-All Collaborative.js binary files can be found in [dist directory](https://github.com/collaborativejs/collaborative-js/tree/master/dist) of the master github branch or
-[collaborative-js.zip](https://github.com/collaborativejs/collaborative-js/archive/master.zip) archive.
- 
- 
-## Getting Started
-[Getting Started guide](http://collaborativejs.org/docs/getting-started) leads through the most basic tasks of the 
-collaborative access topic. During this guide we will build a simple Node.js application with collaborative access 
-to a plain text (text live editing).
-
-Note: If you prefere to run getting started example first, visit [getting-started-example repo](https://github.com/collaborativejs/getting-started-example) 
+</table> 
 
 
 ## Demo
