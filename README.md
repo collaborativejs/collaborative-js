@@ -93,4 +93,4 @@ Note: If you prefere to run getting started example first, visit [getting-starte
 
 
 ## License
-© [Collaborativejs.org](http://collaborativejs.org/), released under the [MIT License](https://github.com/collaborativejs/collaborative-js/blob/master/LICENSE.md).
+© [Collaborativejs.org](http://collaborativejs.org/) - Operational transformation library, released under the [MIT License](https://github.com/collaborativejs/collaborative-js/blob/master/LICENSE.md).
