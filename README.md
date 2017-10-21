@@ -93,5 +93,4 @@ Note: If you prefere to run getting started example first, visit [getting-starte
 
 
 ## License
-The [Collaborative.js](http://collaborativejs.org) library is available under different licenses depending on whether it is intended for commercial/government use, or for a personal or non-profit project.
-Visit [license page](http://collaborativejs.org/buy) to learn more about licensing policy.
+© [Collaborativejs.org](http://collaborativejs.org/), released under the [MIT License](https://github.com/collaborativejs/collaborative-js/blob/master/LICENSE.md).
