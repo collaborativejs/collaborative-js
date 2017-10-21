@@ -1,7 +1,7 @@
 var request = require('request');
 var syncRequest = require('sync-request');
 var uuid = require('uuid');
-var clv = require('collaborativejs');
+var clv = require("../../index.js");
 var fs = require('fs');
 
 
@@ -221,7 +221,7 @@ function generateTest() {
   var test = '';
   var serverUpdates = {};
   var summary = [];
-  test += 'var clv = require("collaborativejs");\n';
+  test += 'var clv = require("../../index.js");\n';
   test += 'var assert = require("assert");\n\n';
   test += 'describe("Generated test - TEST_SUMMARY - TEST_ID", function() {\n';
 

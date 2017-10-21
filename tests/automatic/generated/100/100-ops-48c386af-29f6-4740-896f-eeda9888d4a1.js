@@ -1,4 +1,4 @@
-var clv = require("collaborativejs");
+var clv = require("../../../../index.js");
 var assert = require("assert");
 
 describe("Generated test - rm/rm/undo/redo/rm/undo/undo/undo/ins/undo/ins/ins/undo/undo/redo/rm/undo/ins/undo/rm/rm/rm/rm/undo/rm/undo/rm/rm/undo/rm/ins/rm/rm/ins/undo/ins/undo/redo/undo/ins/rm/rm/undo/undo/ins/rm/rm/undo/redo/undo/undo/rm/ins/ins/rm/ins/undo/ins/undo/undo/ins/ins/rm/undo/ins/undo/rm/undo/ins/undo/ins/rm/ins/undo/undo/rm/rm/ins/ins/undo/undo/rm/ins/ins/rm/undo/redo/rm/rm/undo/ins/ins/rm/ins/rm/undo/undo/rm/ins/rm - 100-ops-48c386af-29f6-4740-896f-eeda9888d4a1", function() {
